@@ -1,0 +1,30 @@
+name: Watch and Notify
+#on:
+#  schedule:
+#    # 월화수목금 9~18시에 한시간마다 실행
+#    # UTC의 09:00는 한국시간 18:00
+#    - cron: '0 13-23/1 * * 1-5'
+on:
+  pull_request:
+    branch:
+      - master
+  push:
+    branch:
+      - master
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      - name: Install dependencies
+        run:
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 slackweb
+          #if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: Execute Python script # Run the run.py to get the latest data
+        run: |
+          python run.py
