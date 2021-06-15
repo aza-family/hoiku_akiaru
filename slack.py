@@ -1,9 +1,11 @@
 #coding: UTF-8
 
 import slackweb
+import requests
+from os import getenv
 
 # --- Slack Setting ---
-SLACK_WEBHOOK='https://hooks.slack.com/services/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'
+SLACK_WEBHOOK=getenv('SLACK_WEBHOOK')
 SLACK_CHANNEL='#hoiku-watch'
 SLACK_USER='一時保育空き警報発令！！'
 SLACK_TEXT="空きがでたっぽいよ！！急げ"
