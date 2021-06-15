@@ -13,10 +13,10 @@ result = soup.find_all('p', attrs={'style':'background-color:White;font-size:10p
 
 if result:
     print('result:',result)
-    #slack.post
+    Slack.post()
 else:
    print('result is empty:',result)
-   Slack.post()
+   #Slack.post()
 
 # --- Slack Post ---
 
