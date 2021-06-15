@@ -1,8 +1,4 @@
 name: Watch and Notify
-on:
-  schedule:
-    # 5분에 한번씩 실행
-    - cron: "*/5 * * * *"
 #on:
 #  pull_request:
 #    branch:
@@ -10,6 +6,10 @@ on:
 #  push:
 #    branch:
 #      - master
+on:
+  schedule:
+    # 10분에 한번씩 실행
+    - cron: "*/10 * * * *"
 jobs:
   ci:
     runs-on: ubuntu-latest
