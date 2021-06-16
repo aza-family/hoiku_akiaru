@@ -9,7 +9,7 @@ res = requests.get(url)
 
 soup = BeautifulSoup(res.text, 'html.parser')
 
-result = soup.find_all('p', attrs={'style':'background-color:White;font-size:10pt;border-collapse:collapse;'})
+result = soup.find_all('p', attrs={'style':'color:#000000;background-color:#00bfff;border:solid 1px;'})
 
 if result:
     print('result:',result)
