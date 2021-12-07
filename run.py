@@ -4,7 +4,8 @@ import requests
 from bs4 import BeautifulSoup
 from slack import Slack
 
-url = 'https://koto-kosodate-portal.jp/smf/mizube/general/refresh_cal.php?center_cd=20'
+#url = 'https://koto-kosodate-portal.jp/smf/mizube/general/refresh_cal.php?center_cd=20' #大島
+url = 'https://koto-kosodate-portal.jp/smf/mizube/general/refresh_cal.php?center_cd=10'
 res = requests.get(url)
 
 soup = BeautifulSoup(res.text, 'html.parser')
