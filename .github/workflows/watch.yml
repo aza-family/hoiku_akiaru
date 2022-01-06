@@ -8,8 +8,10 @@ name: Watch and Notify
 #      - master
 on:
   schedule:
+    # 平日 9~19時間 5分単位
+    - cron: "*/5 0-10 * * 1-5"
     # 10분에 한번씩 실행
-    - cron: "*/10 * * * *"
+    #- cron: "*/10 * * * *"
 jobs:
   ci:
     runs-on: ubuntu-latest
