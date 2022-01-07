@@ -8,7 +8,7 @@ name: Watch and Notify
 #      - master
 on:
   schedule:
-    - cron: "45 0-10 * * 1-5"
+    - cron: "45 0-1 * * 1-5"
     # 平日 9~19時間 5分単位
     # - cron: "*/5 0-10 * * 1-5"
     # 10분에 한번씩 실행
