@@ -18,10 +18,10 @@ result = soup.find_all('a', attrs={ 'class': lambda val: val in ['bgG', 'bgB'] }
 
 if result:
    print('result:',result)
-   Slack.post(10)
+   Slack(10).post()
 else:
    print('result is empty:',result)
-   #Slack.post()
+   # Slack(10).post()
 
 # if result2:
 #     print('result2:',result2)
