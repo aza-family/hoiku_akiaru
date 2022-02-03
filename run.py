@@ -17,7 +17,7 @@ if result:
    Slack(10).post()
 else:
    print('result is empty:',result)
-   Slack(10).post()
+   #Slack(10).post()
 
 # ---------------------------
 
